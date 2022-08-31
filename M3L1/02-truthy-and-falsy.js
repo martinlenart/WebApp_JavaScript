@@ -28,7 +28,8 @@ let obj = {};
 if (obj) console.log(`show only if truthy`);
 
 /* Exercise 
-//discuss what will be printed to the console in below code:
+
+1. discuss what will be printed to the console in below code:
 let i = 10;
 while (i)
 {
