@@ -24,6 +24,7 @@ const moneyString = formatter.format(someNumber);
 
 console.log(`${someNumber} with a U.S. currency formatted is ${moneyString}`);
 
-/* Exercises
-1. Explore Intl.NumberFormat documentation and write {someNumber} in swedish kronor. Format is 'sv''
-*/
+const formatterSv = new Intl.NumberFormat('sv-sv', { style: 'currency', currency: 'Sek' });
+const moneyStringSv = formatterSv.format(someNumber);
+
+console.log(`${someNumber} with a Swedish currency formatted is ${moneyStringSv}`);

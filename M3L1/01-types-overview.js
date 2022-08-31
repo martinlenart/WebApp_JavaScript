@@ -111,3 +111,10 @@ function isEqual(obj1, obj2) {
   return (JSON.stringify(obj1) === JSON.stringify(obj2));
 }
 
+
+/* Exercises
+
+1. Declare a variable and the variable various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
+   Write the variable to the console after each assignment
+
+*/
