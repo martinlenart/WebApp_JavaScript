@@ -116,7 +116,7 @@ function isEqual(obj1, obj2) {
 
 /* Exercises
 
-1. Declare a variable and the variable various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
+1. Declare a variable and the assign various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
    Write the variable to the console after each assignment
 2. create a string from "1"+ "0".repeat(100)
 3. create a couple of objects with properterties and test equality (value and referential)
