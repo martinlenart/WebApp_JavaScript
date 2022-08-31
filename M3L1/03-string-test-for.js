@@ -73,9 +73,10 @@ if (typeof numberTest === 'number' && !Number.isNaN(numberTest))
   
 /* Exercises
 
-1. write code that: declare a variable, test assign it undefined; write to the console test and the typeof test, 
-2. Assign test a non-empty string, and test it
-3. Assign test a number and test if it is a valid number
-4. Assign to test null,  {}, NaN, and Infinity and test for valid number
+1. write code that: declare a variable myVar without assigning it; 
+   write to the console myVar and the typeof myVar, 
+2. assign and check if myVar is an non-empty string or if myVar is a valid number
+3. assign to myVar null,  {}, NaN, and Infinity and write checks
+4. assign to myVar various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
 
 */

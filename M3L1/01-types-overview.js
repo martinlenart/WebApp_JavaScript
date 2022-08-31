@@ -1,7 +1,7 @@
 //Just to ensure we force js into strict mode in HTML scrips - we don't want any sloppy code
 'use strict';
 
-console.group('DECLARING variables and constants');
+//console.group('DECLARING variables and constants');
 // data types in js, but note you do NOT declare a datatype for variable
 // variables are declared using let
 // Using strict mode revents you from using a variable before it is declared
@@ -18,6 +18,12 @@ let undefinedTest = undefined;
 let nullTest = null;
 let NaNTest = NaN;
 
+console.log(stringTest + numberTest);
+stringTest = 42;
+console.log(stringTest + numberTest);
+console.log('84'+ stringTest + numberTest);
+
+/*
 // constants are declared using const, and cannot be reassigned
 const stringConst = "I am a constant string";
 //stringConst = "trying to set another value";  // TypeError
@@ -110,7 +116,7 @@ console.log(JSON.stringify(name1), JSON.stringify(name2), isEqual(name1, name2))
 function isEqual(obj1, obj2) {
   return (JSON.stringify(obj1) === JSON.stringify(obj2));
 }
-
+*/
 
 /* Exercises
 
