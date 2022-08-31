@@ -113,6 +113,25 @@ function isEqual(obj1, obj2) {
   return (JSON.stringify(obj1) === JSON.stringify(obj2));
 }
 
+let myVar = 5;
+console.log(myVar);
+myVar = 5+8;
+console.log(myVar);
+myVar = 5+8+'15';
+console.log(myVar);
+myVar = 5+8+'15'+{};
+console.log(myVar);
+
+let s = "1"+ "3".repeat(20);
+console.log(s);
+
+let o1 = {phone:"070-1111", address: {street: "ringvagen"}};
+let o2 = {phone:"070-1111", address: {street: "ringvagen"}};
+
+console.log(o1==o2);
+console.log(o1===o2);
+console.log(o1.phone===o2.phone);
+console.log(o1.address===o2.address);
 
 /* Exercises
 

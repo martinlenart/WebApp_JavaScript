@@ -1,5 +1,5 @@
 let stringTest = '42';
-const numberTest = 42;
+let numberTest = 42;
 const blankTest = '';
 const nullTest = null;
 const wrappedTest = new String('42');
@@ -66,6 +66,7 @@ console.log(!stringTest); // falsy - WRONG is is not a string, but any number ex
 
 
 console.log('\nTest for other types')
+numberTest = Number.POSITIVE_INFINITY;
 if (typeof numberTest === 'number' && !Number.isNaN(numberTest))
 {
   console.log(`${numberTest} is a valid number`);
@@ -77,5 +78,6 @@ if (typeof numberTest === 'number' && !Number.isNaN(numberTest))
    write to the console myVar and the typeof myVar, 
 2. assign and check if myVar is an non-empty string or if myVar is a valid number
 3. assign to myVar null,  {}, NaN, and Infinity and write checks
+
 
 */

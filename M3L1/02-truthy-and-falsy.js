@@ -25,16 +25,30 @@ if (NaN) console.log(`show only if truthy`);
 //all values that are not falsy are considered truthy
 //Note that this means an empty object {} is truthy
 let obj = {};
-if (obj) console.log(`show only if truthy`);
+if (obj) console.log(`an empty {} Object is truthy`);
 
-/* Exercise 
-
-1. discuss what will be printed to the console in below code:
 let i = 10;
 while (i)
 {
     i--;
     console.log(i);
 }
-console.log('done';)
+console.log('done');
+
+const s = 'Ann';
+if (s)
+    console.log (`hello ${s}`);
+
+/* Exercise 
+
+1. discuss what will be printed to the console in below code:
+
+let i = 10;
+while (i)
+{
+    i--;
+    console.log(i);
+}
+console.log('done');
+
 */
