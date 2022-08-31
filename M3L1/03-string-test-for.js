@@ -38,7 +38,7 @@ if (typeof wrappedTest === 'string' && wrappedTest.length > 0) {
 
 console.log('\nFind even an object where String is a prototype, a wrapped string');
 if (typeof wrappedTest === 'string' ||
-    String.prototype.isPrototypeOf(wrappedTest)) {
+  String.prototype.isPrototypeOf(wrappedTest)) {
   console.log(`wrappedTest is a string, however, wrappedTest is of type ${typeof wrappedTest}`)
 }
 
@@ -67,11 +67,32 @@ console.log(!stringTest); // falsy - WRONG is is not a string, but any number ex
 
 console.log('\nTest for other types')
 numberTest = Number.POSITIVE_INFINITY;
-if (typeof numberTest === 'number' && !Number.isNaN(numberTest))
-{
+if (typeof numberTest === 'number' && !Number.isNaN(numberTest)) {
   console.log(`${numberTest} is a valid number`);
 }
-  
+
+function myFunc(myVar) {
+
+  if (typeof myVar !== 'string') {
+    console.log("\nwrong type - cannot run the algorithm");
+    return;
+  }
+
+  if (myVar.length !== 0) {
+    //Non empty string - do the algorithm
+    console.log("\nNon empty string - do the algorithm");
+  }
+  else {
+    //if the string is empty, set some default values and do the algorithm
+    console.log("\nempty string, set some default values and do the algorithm");
+  }
+}
+
+myFunc("Martin");
+myFunc("");
+myFunc(5);
+myFunc(0);
+
 /* Exercises
 
 1. write code that: declare a variable myVar without assigning it; 
