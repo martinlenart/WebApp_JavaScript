@@ -26,3 +26,14 @@ if (NaN) console.log(`show only if truthy`);
 //Note that this means an empty object {} is truthy
 let obj = {};
 if (obj) console.log(`show only if truthy`);
+
+/* Exercise 
+//discuss what will be printed to the console in below code:
+let i = 10;
+while (i)
+{
+    i--;
+    console.log(i);
+}
+console.log('done';)
+*/
