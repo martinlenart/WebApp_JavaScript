@@ -83,8 +83,9 @@ if (typeof test === 'string' && test.length > 0) {
 
 /* Exercises
 
-1. write code that: declare a variable test without assigning it; write to the console test and the typeof test, if test is an non-empty string, if test is a valid number
-2. assign to test null,  {}, NaN, and Infinity;
-3. assign to test various values such as 5, 5+8, 5+8+'15', 5+8+'15'+{}, '', "", ``;
+1. write code that: declare a variable myVar without assigning it; 
+   write to the console myVar and the typeof myVar, 
+2. assign and check if myVar is an non-empty string or if myVar is a valid number
+3. assign to myVar null,  {}, NaN, and Infinity and write checks
 
 */
