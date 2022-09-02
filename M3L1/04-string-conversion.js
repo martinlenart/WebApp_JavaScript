@@ -19,11 +19,16 @@ const scientificString = someNumber.toExponential(2);
 console.log(`${someNumber} with toExponential(2) is ${scientificString}`);
 
 
-const formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-const moneyString = formatter.format(someNumber);
+let formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+let moneyString = formatter.format(someNumber);
 
 console.log(`${someNumber} with a U.S. currency formatted is ${moneyString}`);
 
+
+formatter = new Intl.NumberFormat('sv', { style: 'currency', currency: 'Sek' });
+moneyString = formatter.format(someNumber);
+
+console.log(`${someNumber} with a Sek currency formatted is ${moneyString}`);
 /* Exercises
 1. Explore Intl.NumberFormat documentation and write {someNumber} in swedish kronor. Format is 'sv''
 */

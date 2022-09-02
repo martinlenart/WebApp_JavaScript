@@ -9,7 +9,7 @@ function getDaysSince(date) {
 }
 
 // Strings with escape sequences
-const favoriteMovie = 'My favorite movie is \'The Seventh Seal\'.';
+const favoriteMovie = "My favorite movie is \"The Seventh Seal\".";
 console.log(favoriteMovie);
 
 const copyrightNotice = 'This page \u00A9 Shelley Powers.';

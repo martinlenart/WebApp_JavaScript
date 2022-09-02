@@ -71,7 +71,8 @@ if (typeof numberTest === 'number' && !Number.isNaN(numberTest)) {
   console.log(`${numberTest} is a valid number`);
 }
 
-function myFunc(myVar) {
+function myFunc(
+) {
 
   if (typeof myVar !== 'string') {
     console.log("\nwrong type - cannot run the algorithm");
@@ -92,6 +93,14 @@ myFunc("Martin");
 myFunc("");
 myFunc(5);
 myFunc(0);
+
+const testVar = 5;
+if (typeof testVar === 'number' && !Number.isNaN(testVar))
+console.log('number is valid');
+else
+console.log('number is invalid');
+
+
 
 /* Exercises
 
