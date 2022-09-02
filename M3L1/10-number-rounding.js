@@ -1,6 +1,7 @@
 //Just to ensure we force js into strict mode in HTML scrips - we don't want any sloppy code
 'use strict';
 
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 function roundNumber(value, numberOfDecimalPlaces) {
   const numberToRound = value * (10**numberOfDecimalPlaces);
   const roundedNumber = Math.round(numberToRound);

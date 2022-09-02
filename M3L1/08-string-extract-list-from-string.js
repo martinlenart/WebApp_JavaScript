@@ -14,6 +14,9 @@ let fruits = list.split(',');
 // now fruits has these elements: ['cherries', ' oranges', ' apples', '
 // bananas']
 
+for (let index = 0; index < fruits.length; index++) {
+    fruits[index] = fruits[index].trim();
+}
 
 //using trim() to remove whitespace characters right and left
 fruits = fruits.map(s => s.trim());

@@ -6,6 +6,15 @@ function dateFromStringTests() {
   //use Date.parse() to check valid date format
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse
 
+  let a = 6.7;
+  console.log(Math.floor(a)); //6
+  console.log(Math.trunc(a)); //6
+
+
+  a = -6.7;
+  console.log(Math.floor(a)); //-7
+  console.log(Math.trunc(a)); //-6
+
   console.group('Date from a string in ISO 8601 standard');
   const ISOdateConverted = new Date(Date.parse('2021-12-17T03:24:00'));
   console.log(`ISO converted: ${ISOdateConverted}`);

@@ -24,7 +24,7 @@ function dateFromStringTests() {
 
 
   console.log('\nTest for bad date')
-  const badDate = '12 bananas';
+  const badDate = '2021-12-17T03:24:00';
   convertedDate = Date.parse(badDate);
   
   if (Number.isNaN(convertedDate)) {

@@ -6,8 +6,8 @@
 // randomNumber = Math.floor(Math.random() * (max - min + 1) ) + min;
 
 // Get 10 random numbers from 1-6
-for (let i=0; i<10; i+=1) {
-  const randomNumber = Math.floor(Math.random()*6) + 1;
+for (let i = 0; i < 10; i += 1) {
+  const randomNumber = Math.floor(Math.random() * 6)+1;
   console.log(randomNumber);
 }
 
@@ -15,6 +15,12 @@ for (let i=0; i<10; i+=1) {
 // Exercise
 const rndFirstNames = 'This is a list of first names to pick randomly: John, Mary, Hans, Thomas, José, Susanne';
 const rndLastNames = 'This is a list of last names to pick randomly: Smith, Schultz, Perez, Johnsson';
+
+//randomNumber = Math.floor(Math.random() * (max - min) ) + min;
+//non inclusive max, but inclusive min
+function rnd(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 /* Exercises
 
