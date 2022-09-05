@@ -91,9 +91,7 @@ let proto = {
 }
 
 //now we can assign the prototype to the created objects
-Object.setPrototypeOf(v2, proto);
 Object.setPrototypeOf(v3, proto);
 
 console.log(''+v1);
-console.log(''+v2);
 console.log(''+v3);
