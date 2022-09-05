@@ -18,23 +18,33 @@ if (!('zipCode' in address)) {
 }
 
 // Check how many proerties there is
-const properties = Object.keys(address);
+let properties = Object.keys(address);
 console.log(`The address object has a length of ${properties.length}`);
+
+const obj = {};
+if (typeof obj === 'object' && Object.keys(obj).length === 0)
+  console.log('this is an empty object');
+
 
 
 // Iterate over all properties
-console.log('\nIterating over all properties');
-console.log(`using a typical array for..of loop on the key array of ${address}`);
-for (const property of properties) {
-  console.log(`Property: ${property}, Value: ${address[property]}`);
-}
-
+//Object properties iteration
 console.log(`\nusing a for..in loop on properties of ${address} and it's prototypes`)
 for (const property in address) {
   console.log(`Property: ${property}, Value: ${address[property]}`);
 }
 
+
+console.log('\nIterating over all properties');
+console.log(`using a typical array for..of loop on the key array of ${address}`);
+//Array iteration over Object Keys
+properties = Object.keys(address);
+for (const property of properties) {
+  console.log(`Property: ${property}, Value: ${address[property]}`);
+}
+
 console.log(`\nusing a for loop on the key/value array of ${address}`);
+//Array iteration over Object Keys
 const entries = Object.entries(address);
 for (let i = 0; i < entries.length; i+=1) {
   console.log(`${entries[i][0]} : ${entries[i][1]}`);

@@ -17,6 +17,7 @@ console.log(data.type);           // primary
 //data.type = 'secondary';          // TypeError in strict mode: not allowed to change 
 //console.log(data.type);           // No Error in non-strict mode, but unchanged
 
+
 // Create a writeable property
 Object.defineProperty(data, 'id', {
   value: 1,
@@ -28,6 +29,7 @@ console.log(data.id); // 1
 data.id = 300;
 console.log(data.id); // 300
 console.groupEnd();
+
 
 console.group('Restring properties through getters and setters');
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get
@@ -61,8 +63,10 @@ const person = {
 //person.age = 25;      //TypeError in strict mode as it is a get only
 console.log(`Age of person born ${person.dateOfBirth.toDateString()} is ${person.age}`); 
 
+
 person.dateOfBirthString = '1986.05.12'; //setting is fine
 console.log(person.dateOfBirthString);   //undefined property as there is no getter
 
 console.log(`Age of person born ${person.dateOfBirth.toDateString()} is ${person.age}`); 
 console.groupEnd();
+

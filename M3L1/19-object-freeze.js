@@ -6,7 +6,7 @@ const customer = {
   firstName: 'Josephine',
   lastName: 'Stanecki'
 };
-  
+
 console.log(customer);
 console.log('Change customer name');
 customer.firstName = 'Jo';
@@ -18,7 +18,7 @@ Object.freeze(customer);
 console.log('Attempt to change customer name');
 
 // This fails silently (or throws an exception in strict mode)
-//customer.firstName = 'Jose';
+customer.firstName = 'Jose';
 
 // Below will also fail when frozen
 //customer.middleInitial = 'P';
