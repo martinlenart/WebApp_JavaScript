@@ -91,6 +91,6 @@ Object.setPrototypeOf(v1, proto);
 Object.setPrototypeOf(v2, proto);
 Object.setPrototypeOf(v3, proto);
 
-console.log(''+v1);
+console.log(v1.toString());
 console.log(''+v2);
 console.log(''+v3);
