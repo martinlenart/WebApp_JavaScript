@@ -19,7 +19,7 @@ function createRandomVehicle() {
     Object.defineProperty(vehicle, 'age', {
         get() {
             const today = new Date();
-            return today.getFullYear() - vehicle.year;
+            return today.getFullYear() - this.year;
         }
     });
 
@@ -82,15 +82,18 @@ const v3 = createRandomVehicle();
 console.log(isEqual(v1, v3));
 
 
+//assign toString function only
+v1.toString = function () { return `The vehicle is ${this.age} years old` };
+
+//assign new prototype to Object
 let proto = {
     toString: function () { return `The vehicle is ${this.age} years old` }
 }
 
 //now we can assign the prototype to the created objects
-Object.setPrototypeOf(v1, proto);
 Object.setPrototypeOf(v2, proto);
 Object.setPrototypeOf(v3, proto);
 
-console.log(v1.toString());
+console.log(''+v1);
 console.log(''+v2);
 console.log(''+v3);

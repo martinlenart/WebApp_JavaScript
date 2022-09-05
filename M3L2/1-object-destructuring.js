@@ -12,6 +12,9 @@ const animal = {
 const { Order, Name } = animal;
 console.log(Name, Order);
 
+const animal2 = {Order, Name};
+console.log(animal2);
+
 //destructuring into separately declared variables, still same names
 const address = {
     country: 'Australia', city: 'Sydney', streetNum: '412',
