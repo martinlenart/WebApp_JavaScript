@@ -63,13 +63,6 @@ const vehicle_proto = {
 
 const vehicle = Object.create(vehicle_proto);
 
-/*
-let vehicle = Object.create(vechile_proto,
-    {
-        regNumber: { value: "unknown" }, make: { value: "unknown" }, model: { value: "unknown" }, year: { value: 0 },
-        owner: { value: { firstName: "unknown", lastName: "unknown", email: "unknown" }, writable: true }
-    });
-*/
 
 console.group('Exercise 1 and 2');
 
