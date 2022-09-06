@@ -16,7 +16,7 @@ console.log(o1.prop1);
 console.log(o2.prop1);
 console.log(o3.prop1);
 
-/*
+
 
 console.group('Every object has a prototype, empty object has Object as prototype')
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
@@ -72,6 +72,6 @@ console.log(oChild.hasOwnProperty('oprop1'));   //false
 console.groupEnd();
 
 
-*/
+
 
 
