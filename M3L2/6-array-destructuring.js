@@ -8,10 +8,12 @@ console.log(missouri); // 144
 const numbers = [2, 42, 5, 304, 1, 13];
 
 //...operator destructurs the array into content items
+console.log(numbers);
 console.log(...numbers);
 
 
 // So it is easy to find the largest number without iterating, because Math.max takes unlimited parameters
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 // so, whenever you see in js a function that takes an unlimited nr of parameters, use ...on an array
+console.log(Math.max(1,3,100,1000, 0, 3));
 console.log(Math.max(...numbers));

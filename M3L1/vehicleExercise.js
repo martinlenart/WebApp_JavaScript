@@ -95,3 +95,23 @@ Object.setPrototypeOf(v3, proto);
 
 console.log(''+v1);
 console.log(''+v3);
+
+let vehicles = [];
+for (let index = 0; index < 1000; index++) {
+    vehicles.push(createRandomVehicle());    
+}
+console.log(vehicles);
+
+const oldvehicles = vehicles.filter(v => v.age > 5);
+console.log(oldvehicles.length);
+
+const ages = oldvehicles.map(v => v.age);
+console.log(ages);
+
+const uniqueAges = [...new Set(ages)].sort((a,b)=> b-a);
+console.log(uniqueAges);
+
+const avgAge = uniqueAges.reduce((prev, curr) => prev+curr, 0)/uniqueAges.length;
+console.log(avgAge);
+
+console.log(Math.max(...uniqueAges));

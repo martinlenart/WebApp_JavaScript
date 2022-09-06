@@ -22,10 +22,10 @@ const address = {
 };
 
 //variable names has to same as property names, but order irrelevant
-let country, city;
+//let country, city;
 
 //Note the () needed in the assignment
-({ city, country } = address);
+let { city, country } = address;
 console.log(country, city);
 
 

@@ -1,6 +1,22 @@
 //Just to ensure we force js into strict mode in HTML scrips - we don't want any sloppy code
 'use strict';  // Try without strict mode
 
+let proto = {prop1: "val1"};
+let o1 = Object.create(proto);
+let o2 = Object.create(proto);
+let o3 = Object.create(o1);
+
+
+o1.prop1 = "o1 prop1";
+o2.prop1 = "o2 prop1";
+proto.prop1 = "new prot value";
+
+delete o1.prop1;
+console.log(o1.prop1);
+console.log(o2.prop1);
+console.log(o3.prop1);
+
+/*
 
 console.group('Every object has a prototype, empty object has Object as prototype')
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
@@ -56,6 +72,6 @@ console.log(oChild.hasOwnProperty('oprop1'));   //false
 console.groupEnd();
 
 
-
+*/
 
 
