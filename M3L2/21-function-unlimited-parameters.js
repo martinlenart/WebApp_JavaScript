@@ -24,3 +24,7 @@ function sumRounds(mustHave1, mustHave2, ...numbers) {
 
 console.log(sumRounds(5, 16, 18.1));          // 39
 console.log(sumRounds(2.3, 4, 5, 16, 18.1));  // 45
+
+const a = [1,2,3,4,5,6,7,8,9,];
+console.log(sumRounds(0,0, ...a));
+

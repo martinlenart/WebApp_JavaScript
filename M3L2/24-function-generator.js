@@ -7,6 +7,7 @@
 
 // Simple generator with hard-coded values.
 function* generateValues() {
+
   yield 895498;
   yield 'This is the second value';
   yield 5;

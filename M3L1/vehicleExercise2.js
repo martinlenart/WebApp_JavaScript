@@ -91,6 +91,7 @@ const vClone2 = [...vClone1];
 console.log(`Number of BMW owners ${vClone1.length} (${vClone2.length})`);
 console.groupEnd();
 
+
 console.group('Exercise 5');
 
 vClone1.map(v => {
@@ -102,6 +103,7 @@ console.log(vClone2);
 console.log(`${vClone2[0].owner.firstName} ${vClone2[0].owner.lastName}`);
 console.log(`${vClone2[vClone2.length-1].owner.firstName} ${vClone2[vClone2.length-1].owner.lastName}`);
 console.groupEnd();
+
 
 console.group('Exercise 6');
 

@@ -33,9 +33,11 @@ person.toString = function () { return `${this.firstName} ${this.lastName} from 
 //Set a function property to the object
 person.greeting = function () { return `Hello ${this.firstName}! You live on ${this.address.street}` }
 
+console.log(person);
 console.log('' + person);
 console.log(person.greeting());
 console.groupEnd();
+
 
 console.group('using function to create a class Person and create several objects');
 
@@ -70,9 +72,7 @@ Person.prototype = {
         return age;
     },
     toString: function () { return `${this.firstName} ${this.lastName} from ${this.address.city}, ${this.address.country} is ${this.age} years old.` },
-    greeting: function () { return `Hello ${this.firstName}! You live on ${this.address.street}` },
-
-    
+    greeting: function () { return `Hello ${this.firstName}! You live on ${this.address.street}` },    
 }
 
 //Now I can use the function as a class where every object inherits the properties and methods
@@ -81,16 +81,19 @@ console.log(p1)
 console.log('' + p1);
 console.log(p1.greeting());
 
+
 const p2 = new Person({ firstName: "John", lastName: "Smith", birthDate: new Date(1990, 4, 23) }, { street: "Fullerton Ave 3", city: "Chicago", country: "USA" });
 console.log(p2)
 console.log('' + p2);
 console.log(p2.greeting());
+
 
 const p3 = new Person({ firstName: "Maria", lastName: "Perez", birthDate: new Date(1988, 5, 18) }, { street: "Juan José", city: "Seville", country: "Spain" });
 console.log(p3)
 console.log('' + p3);
 console.log(p3.greeting());
 console.groupEnd();
+
 
 console.group('Generating objects which are randomly initialized');
 
@@ -158,3 +161,4 @@ console.log(aPerson instanceof Person);
 console.log(aPerson instanceof Object);
 console.log(aPerson instanceof Date);
 console.groupEnd();
+

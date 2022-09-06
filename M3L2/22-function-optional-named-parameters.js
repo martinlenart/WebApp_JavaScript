@@ -33,3 +33,11 @@ console.log(difference);
 // Call the function with an object literal, and specify two properties
 difference = dateDifferenceInSeconds(newDate, oldDate, {discardYears:true, precision:3});
 console.log(difference);
+
+
+function NamedParam({param1, param2, param3})
+{
+  console.log(param1, param2, param3);
+}
+
+NamedParam({param3:"hello"});

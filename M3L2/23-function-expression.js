@@ -36,11 +36,14 @@ console.group('Arrow function')
 getRectArea = (width, height) => {
     return width * height;
 };
+const getAnotherRect = getRectArea;
 console.log(getRectArea(3, 4));
+console.log(getAnotherRect(3, 4));
 
 //when an arrow function only has a single return statement remove body {} and return
 getRectArea = (width, height) => width * height;
 console.log(getRectArea(3, 4));
+console.log(getRectArea(5, 2));
 
 //when only a single parameter, also the parenthesis can be removes
 const fDouble = x => x*2;
@@ -62,6 +65,11 @@ console.group('Arrow functions are very ofthen used as argument to another funct
 //Arrow functions provides an excellent way of submitting on the fly a function as an argument
 const numbers = [1,2,3,4,5,6,7,8,9,10];
 const squares = numbers.map( number => number**2 );
+
+console.log(numbers);
 console.log(squares);
+
+numbers.forEach(n=>n*n);
+console.log(numbers);
 
 console.groupEnd();

@@ -84,7 +84,7 @@ class Person {
 
         let result = [];
         for (let i = 0; i < nrOfItems; i++) {
-            result.push(this.#_createRandom());
+            result.push(Person.#_createRandom());
         }
 
         if (result.length == 1)
@@ -95,12 +95,20 @@ class Person {
     }
 }
 
+const p = new Person({firstName:'Martin', lastName:'Lenart'});
+console.log(''+p)
+
+
 const aPerson = Person.createRandom();
 console.log(aPerson)
 console.log('' + aPerson);
 console.log(aPerson.greeting());
 
+let persons1 = Person.createRandom(10);
+
 let persons = Person.createRandom(10);
+console.log(Person.statNrRandomFilled);
+/*
 persons = persons.sort((first, second) => {
 
     if (first.address.country.toLowerCase() < second.address.country.toLowerCase())
@@ -134,6 +142,7 @@ aPerson.email = 'hello53@hotmail.se';
 aPerson.email = 'hello77@gmail.com';
 console.log(aPerson.emails);
 console.groupEnd();
+*/
 
 /* Exercises
 1. Add a random email generator to createRandom() and print out to verify email addresses are created in random

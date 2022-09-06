@@ -32,6 +32,7 @@ app.use(cors({
 //http://localhost:3000
 app.get('/', (req, res) => {
   res.send('Hello World!');
+  console.log('hello again');
 });
 
 //sending a simple json string in response to 
