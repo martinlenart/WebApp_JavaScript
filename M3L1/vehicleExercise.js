@@ -122,7 +122,8 @@ console.log(Math.max(...uniqueAges));
 1. Gör en Refractor på functionerna, CreateRandomVehicle, cloneVehicle, isEqual, isObject, toString så att de läggs i ett
     prototyp object - vehicle_proto.  Tänk på att man kan använda this, och att createRandomVehicle kan ta formen av att initiera ett 
     befintligt object
-2. Skapa ett object, vehicle, som har prototypen vehicle_proto och sätt det till random värden
+2. Skapa ett object, vehicle, som har prototypen vehicle_proto och sätt det till random värden. Låt alla properties vara normala object 
+   properties, dvs du behöver inte använda Object.defineProperty
 3. Skapa en array med 1000 vehicles, all_vehicles, alla satta med random värden
 4. Använd filter och spread operator... för att skapa två shallow clones av  all_vechiles som bara innehåller BMW ägare. Hur många 
    BMW ägare finns det?
