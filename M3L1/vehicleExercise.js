@@ -115,3 +115,17 @@ const avgAge = uniqueAges.reduce((prev, curr) => prev+curr, 0)/uniqueAges.length
 console.log(avgAge);
 
 console.log(Math.max(...uniqueAges));
+
+
+
+/* Exercises
+1. Gör en Refractor på functionerna, CreateRandomVehicle, cloneVehicle, isEqual, isObject, toString så att de läggs i ett
+    prototyp object - vehicle_proto.  Tänk på att man kan använda this, och att createRandomVehicle kan ta formen av att initiera ett 
+    befintligt object
+2. Skapa ett object vehicle som har prototypen vehicle_proto och sätt det till random värden
+3. Skapa en array med 1000 vehicles, all_vehicles, alla satta med random värden
+4. Använd filter och spread operator... för att skapa två shallow clones av  all_vechiles som bara innehåller BMW ägare. Hur många 
+   BMW ägare finns det?
+5. Ändra namnen på alla BMW ägare i en clone till Bruce Wayne. Vad händer med ägarnamnet i den andra shallow clone?
+6. Skapa två shallow clone av alla Volvo ägare från, all_vehicles, MEN clonerna ska BARA innehålla förnamnet (använd map).
+7. Ändra förnamnen på alla Volvo ägare i en clone till Allan. Vad händer med förnamnet i den andra shallow clone?
