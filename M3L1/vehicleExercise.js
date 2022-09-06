@@ -129,3 +129,4 @@ console.log(Math.max(...uniqueAges));
 5. Ändra namnen på alla BMW ägare i en clone till Bruce Wayne. Vad händer med ägarnamnet i den andra shallow clone?
 6. Skapa två shallow clone av alla Volvo ägare från, all_vehicles, MEN clonerna ska BARA innehålla förnamnet (använd map).
 7. Ändra förnamnen på alla Volvo ägare i en clone till Allan. Vad händer med förnamnet i den andra shallow clone?
+*/
