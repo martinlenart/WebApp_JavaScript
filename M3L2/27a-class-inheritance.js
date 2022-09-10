@@ -16,6 +16,7 @@ class mySuper {
   }
 }
 
+
 class myChild extends mySuper {
 
   constructor ()
@@ -27,14 +28,12 @@ class myChild extends mySuper {
     console.log(`childMethod1 says superProp1=${this.superProp1}`);     //note you will get this.superPropt
     console.log(`childMethod1 says superProp1=${super.superProp1}`);    //note will not work -> undefined
   }
-  methodA() {
-    console.log(`methodA in child`);
-    super.methodA();
-  }
 }
 
 const s = new mySuper();
 s.superMethod1();
+s.methodA();
+
 
 const c = new myChild();
 c.childMethod1();

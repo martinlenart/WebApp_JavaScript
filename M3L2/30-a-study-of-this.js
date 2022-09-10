@@ -8,9 +8,11 @@
 //ES2015 introduced arrow functions where this is the value of the enclosing context.
 
 console.group('Global context - this is undefined');
-function funcGlobalContext() {
+
+(function funcGlobalContext(param1) {
+    const a = param1
     console.log(this);          //undefined
-}
+})(3);
 
 let a = 'Global Context';
 console.log(a);
@@ -73,3 +75,4 @@ class classClass {
 const cc = new classClass();
 cc.funcEmbedded(); 
 console.groupEnd();
+*/

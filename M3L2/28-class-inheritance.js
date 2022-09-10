@@ -27,7 +27,7 @@ class GermanChef extends Chef
     this.chefName = 'Franz'; 
     this.favoriteDish = 'Wursts';
     this.age = 30;
-    this.secret_recipe = "Sauer kraut";
+    this.secret_recipe = "Sauerkraut";
   }
 }
 class ItalianChef extends Chef

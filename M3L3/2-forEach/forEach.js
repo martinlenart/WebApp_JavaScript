@@ -4,14 +4,14 @@
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-const items = document.querySelectorAll('li');
+const items = document.querySelectorAll('ul');
 
 //traversing with .ForEach
 items.forEach(item => {
-  console.log(item.firstChild.data);
+  console.log(item.innerText);
 });
 
 //traversion with for..of
 for (const item of items) {
-  console.log(item.firstChild.data); 
+  console.log(item.innerHTML); 
 }

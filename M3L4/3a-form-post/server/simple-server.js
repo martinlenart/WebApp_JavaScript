@@ -30,6 +30,7 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+
 const appDir = 'app-data';
 const appJson = 'directories.json';
 
