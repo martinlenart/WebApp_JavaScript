@@ -8,7 +8,7 @@ const formAddServerDictory = document.getElementById('formAddServerDictory');
 
 //Start the server by opening a terminal in /case-study-server and type node simple-with-form.js
 const urlPost = 'http://localhost:3000/api/createdir';
-const urlJson = './server/app-data/directories.json';
+const urlJson = './server/app-data/albums.json';
 
 
 formAddServerDictory.addEventListener('submit', async event => {
