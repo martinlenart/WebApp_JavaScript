@@ -20,9 +20,9 @@ const validate = () => {
 checkBox.addEventListener('click', validate);
 
 //Using querySelector
-document.getElementById('checkAll').onclick = function() {  
+document.getElementById('checkAll').addEventListener('click', (event) => {  
   var markedCheckbox = document.querySelectorAll('.checkboxes input[type="checkbox"]:checked');  
   for (var checkbox of markedCheckbox) {  
     console.log(checkbox.id + ': ' + checkbox.value);  
   }  
-}  
+});  

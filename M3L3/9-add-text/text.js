@@ -3,6 +3,7 @@
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt
 
+
 //Note that global this is now not undefined, but represent current browser windo
 console.log(this);
 

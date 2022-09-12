@@ -22,17 +22,17 @@ values.forEach(value => {
   });
 
   // attach event handler, to a row click
-  tr.onclick = pruneRow;
+  tr.addEventListener('click', (event) => {pruneRow(event)});
 
   // append row to table
   tbody.appendChild(tr);
   mixed.appendChild(tbody);
 });
 
-function pruneRow() {
+function pruneRow(event) {
   // remove row
-  const parent = this.parentNode;
-  const oldRow = parent.removeChild(this);
+  const parent = event.target.parentNode.parentNode; //td->tr->tbody
+  const oldRow = parent.removeChild(event.target.parentNode);
 
   // dataString from removed row data
   let dataString = '';
