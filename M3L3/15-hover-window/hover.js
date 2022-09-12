@@ -48,7 +48,7 @@ function removeWindow() {
   if (popup) popup.parentNode.removeChild(popup);
 }
 
-window.onload = () => {
+window.addEventListener('load', (event) => {
   const imgs = document.querySelectorAll('img');
   imgs.forEach(img => {
     img.addEventListener(
@@ -64,4 +64,4 @@ window.onload = () => {
         removeWindow();
       });
   });
-};
+});
