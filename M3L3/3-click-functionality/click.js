@@ -7,7 +7,7 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event
 
 //function that should be executed, could be an arrow function
-const clickHandler = event => {
+function clickHandler (event)  {
   //prevent default, stops the link from acting as a <a href=...> acting as it should
   event.preventDefault();
   window.alert(`The ${event.currentTarget.nodeName} element has been clicked!`);

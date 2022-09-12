@@ -4,7 +4,8 @@
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 //https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll
-const items = document.querySelectorAll('ul');
+const items = document.querySelectorAll('.mystyles');
+const item = document.querySelector('.mystyles');
 
 //traversing with .ForEach
 items.forEach(item => {
