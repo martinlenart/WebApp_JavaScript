@@ -1,7 +1,12 @@
 
 const bankID = document.querySelector('#bankID');
 const acountList = document.querySelector('#accountList');
+const btnNext = document.querySelector('#btnNext');
 
+let firstAccountIdx = 0;
+
+//set EventHandler
+btnNext.addEventListener('click', clickHandler);
 
 //Create accounts and bank
 const baccounts = new Account().createRandomMany(1000);
@@ -9,15 +14,29 @@ const bank1 = new Bank("Martins bank1", baccounts );
 
 //set bankinformation
 bankID.innerHTML = bank1.toString();
+renderAccounts(0);
 
-for (let index = 0; index < 10; index++) {
-    const acc = baccounts[index];
 
-    const li = document.createElement('li');
-    li.innerText = acc.toString();
+function renderAccounts(firstIdx) {
+    for (let index = firstIdx; index < firstIdx + 10; index++) {
+        const acc = baccounts[index];
 
-    acountList.appendChild(li);
+        const li = document.createElement('li');
+        li.innerText = acc.toString();
+
+        acountList.appendChild(li);
+    }
 }
 
-console.log(bank1.Total());
-console.log(bank1.TotalCity('Vaasa'));
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+function clickHandler (event)  {
+    firstAccountIdx += 10;
+
+    //removeAllChildNodes(acountList);
+    renderAccounts(firstAccountIdx)
+};
