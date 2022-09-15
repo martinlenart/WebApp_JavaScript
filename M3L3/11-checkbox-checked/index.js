@@ -25,4 +25,24 @@ document.getElementById('checkAll').addEventListener('click', (event) => {
   for (var checkbox of markedCheckbox) {  
     console.log(checkbox.id + ': ' + checkbox.value);  
   }  
-});  
+});
+
+const chkBxs = document.querySelectorAll('.checkboxes input[type="checkbox"]');
+chkBxs.forEach((item) => {
+  item.addEventListener('change', (event) => {
+    console.log(`${event.target.id} changed`)})
+  });
+
+//Using querySelector
+document.getElementById('radioAll').addEventListener('click', (event) => {  
+  var markedCheckbox = document.querySelectorAll('.radiobuttons input[type="radio"]:checked');  
+  for (var radioBtn of markedCheckbox) {  
+    console.log(radioBtn.id + ': ' + radioBtn.value);  
+  }  
+});
+
+const radioBtns = document.querySelectorAll('.radiobuttons input[type="radio"]');
+radioBtns.forEach((item) => {
+  item.addEventListener('change', (event) => {
+    console.log(`${event.target.id} changed`)})
+  });
