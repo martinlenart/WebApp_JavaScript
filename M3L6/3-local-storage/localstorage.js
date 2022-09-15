@@ -10,8 +10,10 @@ const elems = document.querySelectorAll('input');
 
 // store field values
 function processField() {
-  localStorage.setItem(window.location.href, 'true');
   localStorage.setItem(this.id, this.value);
+  
+  //It is simple to read
+  //const value = localStorage.getItem(this.id);
 }
 
 // clear individual fields
@@ -38,3 +40,6 @@ elems.forEach(elem => {
     elem.addEventListener('change', processField);
   }
 });
+
+
+localStorage.setItem('eternal until removed', 'eternal');
