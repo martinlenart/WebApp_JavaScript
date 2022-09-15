@@ -54,7 +54,7 @@ async function myFetch(url, method = null, body = null) {
   console.log(ingredients);
   
   //Alternatively read the updates from a urlSrc that referes to a json file
-  const ingredients1 = await myFetch (urlSrc);
-  console.log(ingredients1);
+  //const ingredients1 = await myFetch (urlSrc);
+  //console.log(ingredients1);
 
 })();
