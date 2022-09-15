@@ -5,9 +5,12 @@
 //https://expressjs.com/en/starter/hello-world.html
 //https://expressjs.com/en/starter/installing.html
 
+//Midleware in express.js to read json body
+//https://expressjs.com/en/4x/api.html#express.json
+
 //in your webapplication project's server directory open a terminal
 //install package.json using 'npm init -y'
-//install validator using npm install express
+//install express using npm install express
 //Now you should have two json files, and a node modules directory: node_modules, package-lock.json, package.json
 
 //install cors
@@ -28,6 +31,10 @@ app.use(cors({
   origin: '*'
 }));
 
+//needed to read the body in a post request
+app.use(express.json());
+
+
 //send a simple Hello World in response to 
 //http://localhost:3000
 app.get('/', (req, res) => {
@@ -43,6 +50,14 @@ app.get('/ingredients', (req, res) => {
   res.send(response);
 });
 
+app.post('/ingredients', (req, res) => {
+
+  const b = req.body;
+  writeJSON('ingredients.json', b);
+
+  //respons with the json file
+  res.json(b);
+});
 
 //Start listening
 app.listen(port, () => {
@@ -55,7 +70,7 @@ app.listen(port, () => {
 function initAppData() {
 
   //Here we can create some initial application data
-   const ingredients = [
+  const ingredients = [
     {
       "id": "1",
       "item": "Bacon"
@@ -73,7 +88,7 @@ function initAppData() {
       "item": "Butter"
     }
   ];
- 
+
   writeJSON(`ingedients.json`, ingredients);
 }
 

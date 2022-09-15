@@ -9,12 +9,17 @@
 sessionStorage.setItem('name', 'Adam');
 sessionStorage.city = 'Pittsburgh';
 
+const me = {name: 'Martin', email:'martin_lenart@icloud.com'}
+sessionStorage.setItem('this is me', JSON.stringify(me));
 // returns 2
 console.log(sessionStorage.length);
 
 // retrieve individual values
 const name = sessionStorage.getItem('name');
 const city = sessionStorage.getItem('city');
+
+const miniMe = JSON.parse(sessionStorage.getItem('this is me'));
+
 
 console.log(`The stored name is ${name}`);
 console.log(`The stored city is ${city}`);

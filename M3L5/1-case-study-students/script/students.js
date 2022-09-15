@@ -12,10 +12,10 @@
 // To use ES6 modules as html script set the type="module" in the script tag
 // <script type="module" src="./script/students.js" ></script>
 
-import studentScore from './studentScore.js';
+import sC from './studentScore.js';
 
 //create som students to fill in the list
-let students = studentScore.createRandom(10);
+let students = sC.createRandom(10);
 
 //sort the students according to avg score 
 students = initializeTable(students);
@@ -43,13 +43,26 @@ function implementAddButton() {
         button.addEventListener('click', (event) => {
 
             //here I find it easier to empty the table completely, add a new student, sort and redraw the table
+            const tbody = document.querySelector('.tbodyFluid');
+            const tfoot = document.querySelector('.tfootFluid');
 
             //EXERCISE:
             //write code to remove all children in existing footer
-
+            while (tbody.firstChild) {
+                tbody.removeChild(tbody.firstChild);
+            }
+            while (tfoot.firstChild) {
+                tfoot.removeChild(tfoot.firstChild);
+            }
             //write code to add a new student to students
-
+            students.push(sC.createRandom());
+            students = students.sort((first, second) => {
+                //lets simply sort the students based on avg score, descending order
+                return second.scores.avg - first.scores.avg;
+            });
+            
             //write code to redraw the table, initialize the table
+            renderTable(students);
         });
     });
 }
@@ -89,7 +102,7 @@ function implementDelButtom() {
 function calculateFooterData(students) {
 
     if (students.length === 0)
-        return new studentScore({}, { minScore: null, maxScore: null, avgScore: null, lastScore: null });
+        return new sC({}, { minScore: null, maxScore: null, avgScore: null, lastScore: null });
 
     const avgTot = students.reduce((prev, current) => { return prev + current.scores.avg / students.length; }, 0);
     const lastTot = students.reduce((prev, current) => { return prev + current.scores.last / students.length; }, 0);
@@ -103,7 +116,7 @@ function calculateFooterData(students) {
     const maxTot = Math.max(...students.map((s) => s.scores.max));
     //console.log(maxTot);
     //notice how I create a StudentScore and use named parameters to set the sums
-    const footerData = new studentScore({}, { minScore: minTot, maxScore: maxTot, avgScore: avgTot, lastScore: lastTot });
+    const footerData = new sC({}, { minScore: minTot, maxScore: maxTot, avgScore: avgTot, lastScore: lastTot });
     return footerData;
 }
 
@@ -120,10 +133,12 @@ function renderTable(tableData) {
         tbody.appendChild(row);
     }
 
+
     //calculate values for the footer and render
     const footerData = calculateFooterData(students);
     const footRow = renderRow(footerData);
     tfoot.appendChild(footRow);
+
 };
 
 function renderRow(rowData) {

@@ -93,11 +93,12 @@ export default studentScore;
 
 
 // test the class
-/*
+
 console.group('Create some studens and sort the list')
 const aStudent = studentScore.createRandom();
 console.log(aStudent)
 console.log('' + aStudent);
+
 
 let students = studentScore.createRandom(10);
 console.log(students);
@@ -106,6 +107,7 @@ students = students.sort((first, second) => {
     //lets simply sort the students based on avg score
     return first.scores.avg - second.scores.avg;
 });
+
 
 // looping through array with for..of
 let avg = 0;
@@ -119,16 +121,18 @@ avg = 0
 students.map((s) => avg += s.scores.avg/students.length);
 console.log(avg);
 
+
 //looping with a reducer
 //prev is result of previous return of the arror function calculation. Initial value is 0
 avg = students.reduce((prev, current) => {return prev + current.scores.avg/students.length;}, 0);
 console.log(avg);
+
 
 //or even shorter
 avg = students.reduce((prev, current) => prev + current.scores.avg/students.length, 0);
 console.log(avg);
 
 console.groupEnd();
-*/
+
 
 
