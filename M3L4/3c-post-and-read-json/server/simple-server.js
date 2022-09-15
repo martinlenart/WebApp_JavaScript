@@ -40,7 +40,7 @@ const appDir = './app-data';
 //http://localhost:3000/ingredients
 app.get('/ingredients', (req, res) => {
 
-  response = readJSON(`ingedients.json`);
+  response = readJSON(`ingredients.json`);
   res.send(response);
 });
 
@@ -59,6 +59,8 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 })
 
+//Initialize application data
+initAppData();
 
 
 //Initialize application data
@@ -84,7 +86,7 @@ function initAppData() {
     }
   ];
 
-  writeJSON(`ingedients.json`, ingredients);
+  writeJSON(`ingredients.json`, ingredients);
 }
 
 //helper functions to read and write JSON

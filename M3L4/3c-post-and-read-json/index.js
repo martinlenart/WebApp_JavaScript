@@ -1,4 +1,8 @@
-const url = 'http://localhost:3000/ingredients';
+//Just to ensure we force js into strict mode in HTML scrips - we don't want any sloppy code
+'use strict';  // Try without strict mode
+
+const urlGetPost = 'http://localhost:3000/ingredients';      //used for get and post
+const urlSrc = './server/app-data/ingredients.json';         //used as alternative for get
 
 async function myFetch(url, method = null, body = null) {
   try {
@@ -39,15 +43,18 @@ async function myFetch(url, method = null, body = null) {
 (async () => {
 
   //read a url, get an object convert it to an object from url
-  const jsonObj = await myFetch(url);
-  console.log(jsonObj);
+  let ingredients = await myFetch(urlGetPost);
+  console.log(ingredients);
+
+  //add an ingredient
+  ingredients.push({id:ingredients.length+1, item: "another goodie"});
 
   //write the object to the url
-  data = await myFetch(url, 'POST', jsonObj);
-  if (data) {
-    console.log(data);
-  }
-
-  //read the updates json file
+  ingredients = await myFetch(urlGetPost, 'POST', ingredients);
+  console.log(ingredients);
+  
+  //Alternatively read the updates from a urlSrc that referes to a json file
+  const ingredients1 = await myFetch (urlSrc);
+  console.log(ingredients1);
 
 })();
