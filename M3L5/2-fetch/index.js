@@ -4,7 +4,7 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Response/json
 
 //get json from nasa
-const url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
+//const url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
 
 //https://openweathermap.org/current
 //const apiKeyOW = "eee86395bdce14b3d962d5956193d800";
@@ -13,9 +13,9 @@ const url = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY';
 
 //https://newsapi.org/docs/endpoints/top-headlines
 //Example where News do not allow cors on developer license
-//const apiKeyNews = "d318329c40734776a014f9d9513e14ae";
+const apiKeyNews = "d318329c40734776a014f9d9513e14ae";
 //const apiKeyNews = "6a2aa4837b194bbdb423edf71b380e8b"
-//const url = `https://newsapi.org/v2/top-headlines?country=se&category=technology&apiKey=${apiKeyNews}`;
+const url = `https://newsapi.org/v2/top-headlines?country=se&category=technology&apiKey=${apiKeyNews}`;
 
 //const url = "https://ws6.seido.se/api/Customers";  //my WebApi generating random customers and orders
 //for api info see https://ws6.seido.se/swagger

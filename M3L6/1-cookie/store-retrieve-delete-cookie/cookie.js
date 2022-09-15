@@ -12,12 +12,13 @@ function setData() {
 
 // retrieve the cookie value for a specified key
 function getData() {
-  const key = document.getElementById('key').value;
+  const keyValue = document.getElementById('key').value;
   const cookie = document.getElementById('cookiestr');
   cookie.innerHTML = '';
 
-  const keyValue = key.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
-  const regex = new RegExp(`(?:^|;)\\s?${keyValue}=(.*?)(?:;|$)`, 'i');
+  //code to reverse encodeURIComponent () of keyValue
+  const keyValueClean = keyValue.replace(/([.*+?^=!:${}()|[\]/\\])/g, '\\$1');
+  const regex = new RegExp(`(?:^|;)\\s?${keyValueClean}=(.*?)(?:;|$)`, 'i');
   const match = document.cookie.match(regex);
   const value = (match && decodeURIComponent(match[1])) || '';
   cookie.innerHTML = `<p>${value}</p>`;
