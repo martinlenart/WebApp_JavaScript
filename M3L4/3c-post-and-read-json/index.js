@@ -36,25 +36,26 @@ async function myFetch(url, method = null, body = null) {
   }
 }
 
-//Lets use myFetch. As it is an async method and I cannot have await at top level, I need to make trick.
-//See analogy on making in C# main async
-//I make main as an asych arrow function with immediate execution of syntax, (async() => {})();
-
-(async () => {
+const myForm = document.getElementById('btnGetPost');
+myForm.addEventListener('click', async (event) => {
 
   //read a url, get an object convert it to an object from url
   let ingredients = await myFetch(urlGetPost);
   console.log(ingredients);
 
+  //Alternatively read the updates from a urlSrc that referes to a json file
+  const ingredients1 = await myFetch(urlSrc);
+  console.log(ingredients1);
+
   //add an ingredient
-  ingredients.push({id:ingredients.length+1, item: "another goodie"});
+  ingredients.push({ id: ingredients.length + 1, item: "another goodie" });
 
   //write the object to the url
   ingredients = await myFetch(urlGetPost, 'POST', ingredients);
   console.log(ingredients);
-  
-  //Alternatively read the updates from a urlSrc that referes to a json file
-  //const ingredients1 = await myFetch (urlSrc);
-  //console.log(ingredients1);
 
-})();
+  //Alternatively read the updates from a urlSrc that referes to a json file
+  const ingredients2 = await myFetch(urlSrc);
+  console.log(ingredients2);
+
+});
