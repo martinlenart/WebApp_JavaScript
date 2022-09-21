@@ -8,7 +8,7 @@
 //ES2015 introduced arrow functions where this is the value of the enclosing context.
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
-
+/*
 console.group('Global context - this is undefined');
 function funcGlobalContext() {
     console.log(this);          //undefined
@@ -19,7 +19,7 @@ console.log(a);
 console.log(this);
 console.log(this.a);            //undefined
 console.groupEnd();
-
+*/
 
 console.group('this - Strange behaviour: Object context');
 const obj = {

@@ -22,7 +22,7 @@ Counter.prototype = {
       // Increament counter is a Callback from setTimer
 
       //will cause an error since the call back will operate on a wrong this
-    setTimeout(this.incrementCounter, 1000);  // number error
+      setTimeout(this.decrementCounter, 1000);  // number error
 
       //Bind to 'this' ensures all further callback are bound to this object, Counter
       
@@ -30,7 +30,7 @@ Counter.prototype = {
 //      setTimeout(decrementCounterFixed, 1000);
 
       //This is the same as above
-//      setTimeout(this.incrementCounter.bind(this), 1000);
+//      setTimeout(this.decrementCounter.bind(this), 1000);
     }
   },
 
