@@ -35,7 +35,7 @@ const obj = {
             console.log(this.prop);     //ERROR: as this is undefined
         };
 
-        funcNested();                   //Call will lead to incorrect this
+        //funcNested();                   //Call will lead to incorrect this
 
         //Correction. Below will create a new function bound to this.
         const funcNestedCorrected = funcNested.bind(this);
@@ -47,7 +47,7 @@ obj.funcObjectContext();
 console.log('' + obj);
 console.groupEnd();
 
-
+/*
 console.group('this - Strange behaviour: Function-as-class context');
 //constructor
 function funcClass() {
@@ -110,3 +110,4 @@ class classClass {
 const cc = new classClass();
 cc.funcEmbedded(); 
 console.groupEnd();
+*/
